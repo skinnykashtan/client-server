@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/c/Users/Hubert/Desktop/client-server/src/ClientHandler.cpp" "CMakeFiles/server.dir/src/ClientHandler.cpp.o" "gcc" "CMakeFiles/server.dir/src/ClientHandler.cpp.o.d"
+  "/mnt/c/Users/Hubert/Desktop/client-server/src/SocketUtils.cpp" "CMakeFiles/server.dir/src/SocketUtils.cpp.o" "gcc" "CMakeFiles/server.dir/src/SocketUtils.cpp.o.d"
   "/mnt/c/Users/Hubert/Desktop/client-server/src/server.cpp" "CMakeFiles/server.dir/src/server.cpp.o" "gcc" "CMakeFiles/server.dir/src/server.cpp.o.d"
   )
 

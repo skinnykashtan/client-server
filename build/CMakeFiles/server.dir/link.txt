@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/server.dir/src/server.cpp.o -o server 
+/usr/bin/c++ CMakeFiles/server.dir/src/server.cpp.o CMakeFiles/server.dir/src/SocketUtils.cpp.o CMakeFiles/server.dir/src/ClientHandler.cpp.o -o server 

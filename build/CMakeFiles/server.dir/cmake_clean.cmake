@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server.dir/src/ClientHandler.cpp.o"
+  "CMakeFiles/server.dir/src/ClientHandler.cpp.o.d"
+  "CMakeFiles/server.dir/src/SocketUtils.cpp.o"
+  "CMakeFiles/server.dir/src/SocketUtils.cpp.o.d"
   "CMakeFiles/server.dir/src/server.cpp.o"
   "CMakeFiles/server.dir/src/server.cpp.o.d"
   "server"

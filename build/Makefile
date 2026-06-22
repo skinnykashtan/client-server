@@ -142,6 +142,54 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+src/ClientHandler.o: src/ClientHandler.cpp.o
+.PHONY : src/ClientHandler.o
+
+# target to build an object file
+src/ClientHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/ClientHandler.cpp.o
+.PHONY : src/ClientHandler.cpp.o
+
+src/ClientHandler.i: src/ClientHandler.cpp.i
+.PHONY : src/ClientHandler.i
+
+# target to preprocess a source file
+src/ClientHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/ClientHandler.cpp.i
+.PHONY : src/ClientHandler.cpp.i
+
+src/ClientHandler.s: src/ClientHandler.cpp.s
+.PHONY : src/ClientHandler.s
+
+# target to generate assembly for a file
+src/ClientHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/ClientHandler.cpp.s
+.PHONY : src/ClientHandler.cpp.s
+
+src/SocketUtils.o: src/SocketUtils.cpp.o
+.PHONY : src/SocketUtils.o
+
+# target to build an object file
+src/SocketUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/SocketUtils.cpp.o
+.PHONY : src/SocketUtils.cpp.o
+
+src/SocketUtils.i: src/SocketUtils.cpp.i
+.PHONY : src/SocketUtils.i
+
+# target to preprocess a source file
+src/SocketUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/SocketUtils.cpp.i
+.PHONY : src/SocketUtils.cpp.i
+
+src/SocketUtils.s: src/SocketUtils.cpp.s
+.PHONY : src/SocketUtils.s
+
+# target to generate assembly for a file
+src/SocketUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/SocketUtils.cpp.s
+.PHONY : src/SocketUtils.cpp.s
+
 src/client.o: src/client.cpp.o
 .PHONY : src/client.o
 
@@ -200,6 +248,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... client"
 	@echo "... server"
+	@echo "... src/ClientHandler.o"
+	@echo "... src/ClientHandler.i"
+	@echo "... src/ClientHandler.s"
+	@echo "... src/SocketUtils.o"
+	@echo "... src/SocketUtils.i"
+	@echo "... src/SocketUtils.s"
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
