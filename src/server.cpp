@@ -37,6 +37,19 @@ int main() {
 
     std::cout << "Server listening on port " << PORT << '\n';
 
+    sockaddr_in clientAddr{};
+    socklen_t clientLen = sizeof(clientAddr);
+    int clientFd = accept(serverFd, reinterpret_cast<sockaddr*>(&clientAddr), &clientLen);
+
+    if (clientFd == -1) {
+        std::cerr << "accept() failed: " << std::strerror(errno) << '\n';
+        close(serverFd);
+        return 1;
+    }
+
+    std::cout << "Client connected, clientFd = " << clientFd << '\n';
+
+    close(clientFd);
     close(serverFd);
 
     return 0;
