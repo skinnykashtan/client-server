@@ -1,6 +1,43 @@
 #include <iostream>
+#include <cerrno>
+#include <cstring>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
 
 int main() {
+    const int PORT = 3000;
+    int serverFd = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (serverFd == -1) {
+        std::cerr << "socket() failed: " << std::strerror(errno) << '\n';
+        return 1;
+    }
+
+    std::cout << "TCP server socket created. fd = " << serverFd << '\n';
+
+    sockaddr_in serverAddr{};
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_addr.s_addr = INADDR_ANY;
+    serverAddr.sin_port = htons(PORT);
+
+    if (bind(serverFd, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) == -1) {
+        std::cerr << "bind() failed: " << std::strerror(errno) << '\n';
+        close(serverFd);
+        return 1;
+    }
+
+    std::cout << "Server bound to port " << PORT << '\n';
+
+    if (listen(serverFd, 5) == -1) {
+        std::cerr << "listen() failed: " << std::strerror(errno) << '\n';
+        close(serverFd);
+        return 1;
+    }
+
+    std::cout << "Server listening on port " << PORT << '\n';
+
+    close(serverFd);
 
     return 0;
 }
